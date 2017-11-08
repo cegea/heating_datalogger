@@ -62,4 +62,4 @@ Just EVERYTHING.
 Eventually I want the following:
 * One single "brain" such as ESP8266 based board to send data over the "cloud".
 * Battery operated.
-* Meet spects, obviusly.
+* Meet specs, obviusly.
