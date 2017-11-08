@@ -1,5 +1,5 @@
 # Heating Datalogger
-Project to store data of the heating system of my house. IoT Project.
+Project to monitorize the heating system of my house. IoT Project.
 
 # Motivation
 Last year I got heating consumption counting installed. Since I got charged for the amount of water that flow through the counter (whether is hot or cold), I thought: "Hey, let´s stimate when the hot water inside the radiator is acctually getting the air around it warmer"
@@ -39,9 +39,9 @@ As I have laying around some LM35 from previous projects this is going to be the
 * Operates from 4 V to 30 V.
 #### Acconditionator. 
 
-* The sensor operates from 4V to 30V. The reference voltaje I´ll fix it is 4.3V. The reference used is TL431, it has 445,33ppm/ºC deviation for this application.
+* The reference voltaje for the sensor will be 4.3V. The reference used is TL431, it has 445,33ppm/ºC deviation for this application.
 
-* The LM358 can be single power supply powered. 
+* The LM358 Op Amp to addapt levels to the ADC. It can be single power supply powered. 
 It´s  major downside is the input offset of 2mV. The error in Celsius is 2º. So for this prototype I´ll allow it. But is a big mistake!! The solution would be to use an OP07(75uV input offset) or similar with virtual ground.
 
 #### Power supply.
@@ -53,8 +53,8 @@ I´ll use the basic example sketch AnalogReadVoltaje adding a delay to send data
 Just a Raspberry Pi (I´m usign the oldest model):
 It does the following:
 * Load the firmware into the Arduino.
-* Read the data from the serial port.
-* Save the data to a CSV file.
+* Read data from the serial port.
+* Save data to a CSV file.
 * Allow SSH or VNC to debbug remotely and send the CSV file anywhere (rigth now my laptop).
 
 # What to improve.
