@@ -13,7 +13,7 @@ Last year I got heating consumption counting installed. Since I got charged for 
 * Open door to fancy things.
 
 ## First prototype
-The object of this prototype is to test and workaround some capabilities.
+The objetive of this prototype is to test and workaround some capabilities.
 To keep things simple the proyect is now divided into two parts:
 1. No Internet things:
 	* Sensor.
@@ -39,7 +39,7 @@ As I have laying around some LM35 from previous projects this is going to be the
 * Operates from 4 V to 30 V.
 #### Acconditionator. 
 
-* The reference voltaje for the sensor will be 4.3V. The reference used is TL431, it has 445,33ppm/ºC deviation for this application.
+* The reference voltage for the sensor will be 4.3V. The reference used is TL431, it has 445,33ppm/ºC deviation for this application.
 
 * The LM358 Op Amp to addapt levels to the ADC. It can be single power supply powered. 
 It´s  major downside is the input offset of 2mV. The error in Celsius is 2º. So for this prototype I´ll allow it. But is a big mistake!! The solution would be to use an OP07(75uV input offset) or similar with virtual ground.
@@ -47,7 +47,7 @@ It´s  major downside is the input offset of 2mV. The error in Celsius is 2º. S
 #### Power supply.
 The Arduino is powered from a 12V adapter. The aconditionator board could be battery powered sometime so I´ll fix it to 9V with an LM317 or LM7809.
 #### ADC & Serial communication.
-I´ll use the basic example sketch AnalogReadVoltaje adding a delay to send data through the serial port.
+I´ll use the basic example sketch AnalogReadvoltage adding a delay to send data through the serial port.
 
 ### 2. Internet things
 Just a Raspberry Pi (I´m usign the oldest model):
@@ -55,7 +55,7 @@ It does the following:
 * Load the firmware into the Arduino.
 * Read data from the serial port.
 * Save data to a CSV file.
-* Allow SSH or VNC to debbug remotely and send the CSV file anywhere (rigth now my laptop).
+* Allow SSH or VNC to debug remotely and send the CSV file anywhere (rigth now my laptop).
 
 # What to improve.
 Just EVERYTHING.
